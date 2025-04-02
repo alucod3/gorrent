@@ -1,64 +1,104 @@
-# GoRrent - Gerenciador de Torrents
+# 🚀 GoRrent - Torrent Manager
 
-GoRrent é um gerenciador de torrents simples, rápido e eficiente, desenvolvido em Go. Ele permite baixar arquivos de torrents a partir de magnet links ou arquivos .torrent locais.
+**GoRrent** is a simple, fast, and efficient torrent manager developed in Go. Download torrent files from magnet links or local .torrent files with a minimalist and powerful experience.
 
-## Características
+![GoRrent Demo](https://raw.githubusercontent.com/alucod3/gorrent/main/docs/demo.gif)
 
-- Interface de linha de comando amigável e intuitiva
-- Suporte para magnet links e arquivos .torrent locais
-- Exibição em tempo real do progresso de download
-- Formatação amigável de tamanhos (KB, MB, GB)
-- Feedback visual com cores e emojis
-- Cancelamento seguro com Ctrl+C
+## ✨ Features
 
-## Instalação
+- **Friendly CLI interface** - Simplified command-line experience
+- **Complete support** - Works with magnet links and local .torrent files
+- **Real-time progress** - Track your downloads with live updates
+- **Smart formatting** - Clear display of sizes in KB, MB, GB
+- **Modern visual** - Visual feedback with colors and emojis for a better experience
+- **Safe operation** - Cancel with Ctrl+C without corrupting your files
 
-### Pré-requisitos
+## 🔧 Installation
 
-- Go 1.16 ou superior
-
-### Compilando a partir do código fonte
+### ⚡ Direct installation (recommended)
 
 ```bash
-# Clone o repositório
-git clone https://github.com/alucod3/gorrent.git
-cd gorrent
-
-# Instale as dependências
-go mod tidy
-
-# Compile o projeto
-go build -o gorrent cmd/gorrent/main.go
-
-# Ou instale diretamente
 go install github.com/alucod3/gorrent/cmd/gorrent@latest
 ```
 
-## Uso
+### Prerequisites
+
+- Go 1.16 or higher
+
+### Installation from source code
 
 ```bash
-# Executar o programa
-./gorrent
+# Clone the repository
+git clone https://github.com/alucod3/gorrent.git
+cd gorrent
 
-# Quando solicitado, você pode:
-# - Colar um magnet link
-# - Arrastar um arquivo .torrent para o terminal
-# - Digitar o caminho para um arquivo .torrent local
+# Install dependencies
+go mod tidy
+
+# Build the project
+go build -o gorrent cmd/gorrent/main.go
 ```
 
-## Estrutura do Projeto
+## 🚀 Usage
 
-O projeto segue uma estrutura modular segundo as melhores práticas do Go:
+```bash
+# Run the program
+gorrent
 
-- `cmd/gorrent`: Ponto de entrada da aplicação
-- `internal/`: Pacotes privados específicos da aplicação
-  - `cli/`: Interface de linha de comando
-  - `config/`: Configurações da aplicação
-  - `downloader/`: Lógica de download de torrents
-  - `validator/`: Validação de links e arquivos
-- `pkg/`: Pacotes públicos que podem ser reutilizados
-  - `utils/`: Utilitários diversos
+# When prompted, you can:
+# - Paste a magnet link
+# - Drag a .torrent file to the terminal
+# - Type the path to a local .torrent file
+```
 
-## Licença
+### Usage examples
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+```bash
+# Start the program and follow the interactive instructions
+gorrent
+
+# Start download directly with a magnet link
+gorrent "magnet:?xt=urn:btih:..."
+
+# Start download with a local .torrent file
+gorrent ~/Downloads/ubuntu-22.04.torrent
+```
+
+## 🏗️ Project Structure
+
+The project follows a modular structure according to Go best practices:
+
+```
+gorrent/
+├── cmd/
+│   └── gorrent/      # Application entry point
+├── internal/         # Private application-specific packages
+│   ├── cli/          # Command-line interface
+│   ├── config/       # Application configurations
+│   ├── downloader/   # Torrent download logic
+│   └── validator/    # Link and file validation
+└── pkg/              # Public reusable packages
+    └── utils/        # Various utilities
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+For questions, suggestions, or feedback, please open an [issue](https://github.com/alucod3/gorrent/issues).
+
+---
+
+Made with ❤️ in Go
